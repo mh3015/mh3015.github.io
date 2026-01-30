@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Gmarket Sans Bold"),
+    url("./fonts/woff2/GmarketSansBold.woff2") format("woff2"),
+    url("./fonts/woff/GmarketSansBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Gmarket Sans Medium"),
+    url("./fonts/woff2/GmarketSansMedium.woff2") format("woff2"),
+    url("./fonts/woff/GmarketSansMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Gmarket Sans Light"),
+    url("./fonts/woff2/GmarketSansLight.woff2") format("woff2"),
+    url("./fonts/woff/GmarketSansLight.woff") format("woff");
+}

@@ -1,0 +1,130 @@
+/* Colors */
+$main-color: #000;
+$main-color-90: rgba(0, 0, 0, .9);
+$main-color-80: rgba(0, 0, 0, .8);
+$main-color-70: rgba(0, 0, 0, .7);
+$main-color-60: rgba(0, 0, 0, .6);
+$main-color-50: rgba(0, 0, 0, .5);
+$main-color-40: rgba(0, 0, 0, .4);
+$main-color-30: rgba(0, 0, 0, .3);
+$main-color-20: rgba(0, 0, 0, .2);
+$main-color-10: rgba(0, 0, 0, .1);
+$main-color-hover: #333;
+
+$brand-color: #555;
+$brand-color-90: rgba(85, 85, 85, .9);
+$brand-color-80: rgba(85, 85, 85, .8);
+$brand-color-70: rgba(85, 85, 85, .7);
+$brand-color-60: rgba(85, 85, 85, .6);
+$brand-color-50: rgba(85, 85, 85, .5);
+$brand-color-40: rgba(85, 85, 85, .4);
+$brand-color-30: rgba(85, 85, 85, .3);
+$brand-color-20: rgba(85, 85, 85, .2);
+$brand-color-10: rgba(85, 85, 85, .1);
+$brand-color-hover: #404040; //f69f00
+
+$sub-color: #f59c00;
+$sub-color-90: rgba(245, 156, 0, .9);
+$sub-color-80: rgba(245, 156, 0, .8);
+$sub-color-70: rgba(245, 156, 0, .7);
+$sub-color-60: rgba(245, 156, 0, .6);
+$sub-color-50: rgba(245, 156, 0, .5);
+$sub-color-40: rgba(245, 156, 0, .4);
+$sub-color-30: rgba(245, 156, 0, .3);
+$sub-color-20: rgba(245, 156, 0, .2);
+$sub-color-10: rgba(245, 156, 0, .1);
+$sub-color-hover: #f58800;
+
+$sub-color-01: #e6007e;
+$sub-color-01-90: rgba(230, 0, 126, .9);
+$sub-color-01-80: rgba(230, 0, 126, .8);
+$sub-color-01-70: rgba(230, 0, 126, .7);
+$sub-color-01-60: rgba(230, 0, 126, .6);
+$sub-color-01-50: rgba(230, 0, 126, .5);
+$sub-color-01-40: rgba(230, 0, 126, .4);
+$sub-color-01-30: rgba(230, 0, 126, .3);
+$sub-color-01-20: rgba(230, 0, 126, .2);
+$sub-color-01-10: rgba(230, 0, 126, .1);
+$sub-color-01-hover: #c3016b;
+
+$red: #e7505a;
+$blue: #508edb;
+$yellow: #fed234;
+$facebook: #3B5998;
+$facebook-hover: #2c4173;
+$kakao-yellow: #ffeb00;
+$kakao-brown: #3c1e1e;
+$kakao-yellow-hover: #ffde00;
+$instagram: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+$twitter: #00ACEE;
+$pinterest: #C8232C;
+$google-plus: #DD4B39;
+
+@mixin flex-align-center {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.flex-direction-column {
+    flex-direction: column !important;
+}
+
+@mixin transition-300 {
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+@mixin transition-400 {
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+
+@mixin noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+
+// Custom Color
+$custom:              #19b798;
+
+$primary:             #425cbb;
+$success:             #10c469;
+$info:                #3db9dc;
+$warning:             #f1b53d;
+$danger:              #ff5d48;
+$white:               #ffffff;
+$black:               #000000;
+$dark:                #28282e;
+$pink:                #ff7aa3;
+$purple:              #9261c6;
+$light:               #f9f9f9;
+$muted:               #7a7d84;
+$blue-gray:           #8993a4;
+$style-gray:          #dee2e6;
+$style-light-gray:    #edeff0;
+
+$font-primary: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+$font-italic: 'Crete Round', serif;
+@mixin font-secondary {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -.5px;
+}
+
+@mixin sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}

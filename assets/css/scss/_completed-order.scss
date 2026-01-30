@@ -1,0 +1,76 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Completed order - /completed-order/
+/*-----------------------------------------------------------------------------------*/
+.completed-order-container {
+    padding: 30px 0 70px;
+    background: #f5f6f7;
+
+    .link-btn-wrapper {
+        margin-top: 30px;
+
+        & > div {
+            a {
+                display: block;
+                padding: 10px 40px;
+                border-radius: 24px;
+                font-size: 15px;
+                @include font-secondary;
+
+                @media (max-width: 575px) {
+                    padding: 10px 25px;
+                    font-size: 14px;
+                }
+
+                @media (max-width: 413px) {
+                    padding: 10px 18px;
+                    font-size: 13px;
+                }
+            }
+
+            &:first-child {
+                a {
+                    background: $white;
+                    border: 2px solid #ccc;
+                    color: $black;
+                    font-weight: 500;
+                    &:hover {
+                        background: #f5f5f5;
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    background: $black;
+                    border: 2px solid $black;
+                    color: $white;
+                    &:hover {
+                        background: #303030;
+                    }
+                }
+            }
+        }
+    }
+
+    dl {
+        font-size: 15px;
+
+        dt, dd {
+            display: inline-block;
+            margin: 0;
+        }
+
+        dt {
+            width: 75px;
+            vertical-align: top;
+            font-weight: 500;
+            color: #888;
+        }
+        dd {
+            font-weight: 300;
+            width: calc(100% - 75px);
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

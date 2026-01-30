@@ -1,0 +1,255 @@
+@use "../abstracts" as *;
+
+/*-----------------------------------------------------------------------------------*/
+/*  Footer
+/*-----------------------------------------------------------------------------------*/
+.top-btn-wrapper {
+  position: relative;
+
+  .go-to-top {
+    position: absolute;
+    top: 0;
+    right: -19px;
+    display: block;
+    @include font-secondary;
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: 700;
+    color: $black;
+    padding: 10px;
+    margin-top: 44px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: -44px;
+      width: 1px;
+      height: 44px;
+      background: #d4d4d4;
+    }
+  }
+}
+
+footer {
+  position: relative;
+  border-top: 1px solid #ccc;
+
+  .footer-container {
+    .each-wrapper {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      flex-direction: column;
+      min-height: 300px;
+      padding: 40px 30px;
+      border-right: 1px solid #ccc;
+
+      @media (max-width: 1199px) {
+        padding: 40px 34px 40px 12px;
+      }
+    }
+
+    & > div {
+      &:first-child {
+        .each-wrapper {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        .each-wrapper {
+          padding-right: 0;
+          border-right: 0;
+        }
+      }
+
+      @media (max-width: 991px) {
+        &.col-md-12 {
+          border-bottom: 1px solid #ccc;
+          .each-wrapper {
+            border-right: 0;
+            min-height: 200px;
+          }
+        }
+
+        &:nth-child(2) {
+          .each-wrapper {
+            padding-left: 0;
+          }
+        }
+      }
+
+      @media (max-width: 575px) {
+        .each-wrapper {
+          min-height: unset !important;
+          border-right: 0 !important;
+          padding: 0;
+        }
+        &.col-md-12 {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .company-name {
+      @include font-secondary;
+      font-size: 15px;
+      font-weight: 700;
+
+      @media (max-width: 575px) {
+        margin: 30px 0;
+        p {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .tit {
+      @include font-secondary;
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 15px;
+
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+
+    .footer-link-wrapper {
+      p {
+        margin-bottom: 0;
+        font-size: 15px;
+        font-weight: 500;
+        color: $brand-color;
+      }
+
+      a {
+        color: $black;
+        font-size: 15px;
+        font-weight: 400;
+        // &:hover {
+        //     font-weight: 400;
+        // }
+
+        &[href^="tel:"] {
+          font-size: 17px;
+        }
+      }
+      .footer-link {
+        color: $black;
+        font-size: 15px;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        display: block;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 575px) {
+        display: flex;
+        display: -webkit-flex;
+        li {
+          @include flex-align-center;
+          margin-bottom: 10px;
+          &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 10px;
+            background-color: #b1b1b1;
+            margin: 0 10px;
+          }
+
+          &:last-child {
+            &::after {
+              content: none;
+            }
+          }
+
+          a {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .sns-icon-wrapper {
+      margin: 20px 0 30px;
+      a {
+        width: 30px;
+        height: 30px;
+        @include flex-align-center;
+        justify-content: center;
+        background: $black;
+        border-radius: 50%;
+        color: $white;
+        font-size: 15px;
+      }
+    }
+
+    .mb-copyright {
+      margin-bottom: 30px;
+      .copyright-wrapper {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  // 간단한 푸터
+  .footer-simple-container {
+    .each-wrapper {
+      padding: 40px 0;
+
+      .company-name {
+        @include font-secondary;
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 575px) {
+          margin: 30px 0;
+          p {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .footer-legal-links {
+      margin-bottom: 40px;
+
+      a {
+        position: relative;
+        padding-right: 15px;
+        font-size: 15px;
+        color: var(--bs-gray-600);
+        & + a {
+          padding: 0 15px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -5px;
+            display: block;
+            width: 1px;
+            height: 10px;
+            background: var(--bs-gray-400);
+          }
+        }
+      }
+    }
+  }
+}

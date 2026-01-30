@@ -1,0 +1,178 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Account Settings - /customer/settings/
+/*-----------------------------------------------------------------------------------*/
+.customer-setting-container {
+    .account-settings {
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: block;
+            }
+        }
+
+        .checkbox-input {
+            display: none;
+
+            &:checked {
+                & + .checkbox-label {
+                    background: $black;
+                    color: $white;
+
+                    .count {
+                        color: $success;
+                    }
+
+                    &[for=canceled] {
+                        .count {
+                            color: var(--bs-red);
+                        }
+                    }
+                }
+            }
+        }
+        .checkbox-label {
+            height: 31px;
+            padding: 6px 12px;
+            background: #f1f4f6;
+            color: #767678;
+            @include font-secondary
+            font-size: 13px;
+            font-weight: 500;
+            border: 0;
+            border-radius: 15px;
+            cursor: pointer;
+
+            .count {
+                margin-left: 5px;
+                color: var(--bs-success);
+            }
+
+            &[for=canceled] {
+                .count {
+                    color: $red;
+                }
+            }
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
+
+        // @media (max-width: 575px) {
+        //     position: relative;
+        //     overflow: hidden;
+        //     &::before {
+        //         content: "";
+        //         position: absolute;
+        //         top: 0px;
+        //         bottom: 0px;
+        //         left: 0px;
+        //         z-index: 2;
+        //         width: 20px;
+        //         background: linear-gradient(90deg, rgb(255, 255, 255) 15.71%, rgba(255, 255, 255, 0) 107.94%);
+        //         pointer-events: none;
+        //     }
+        //     &::after {
+        //         position: absolute;
+        //         content: "";
+        //         top: 0px;
+        //         right: 0px;
+        //         bottom: 0px;
+        //         z-index: 2;
+        //         width: 20px;
+        //         background: linear-gradient(270deg, rgb(255, 255, 255) 15.71%, rgba(255, 255, 255, 0) 107.94%);
+        //         pointer-events: none;
+        //
+        //     }
+        //     .swiper-wrapper {
+        //         flex-wrap: nowrap;
+        //     }
+        // }
+    }
+
+
+    .default-setting-wrapper {
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .new-setting-wrapper {
+        display: none;
+    }
+
+    .btn-wrapper {
+        position: relative;
+        width: calc(100% + 60px);
+        left: -30px;
+        bottom: -30px;
+
+        button {
+            width: 100%;
+            padding: 15px 0;
+            border: 0;
+            color: $white;
+            @include font-secondary;
+            font-size: 15px;
+            font-weight: 500;
+
+            &.btn-save {
+                background: var(--bs-success);
+            }
+            &.btn-cancel {
+                background: #afaeae;
+            }
+        }
+
+        @media (max-width: 991px) {
+            width: calc(100% + 40px);
+            left: -20px;
+            bottom: -20px;
+        }
+    }
+
+    .block-footer {
+        .btn-wrapper {
+            .first {
+                button {
+                    border-radius: 0 0 0 12px;
+                }
+            }
+            .last {
+                button {
+                    border-radius: 0 0 12px 0;
+                }
+            }
+        }
+    }
+
+
+    .btn-edit {
+        padding: 7px 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: $white;
+        color: $muted;
+        @include font-secondary;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1;
+        &:hover {
+            background: #f9f9f9;
+        }
+    }
+
+    .dot-wrapper {
+        span {
+            display: block;
+            width: 5px;
+            height: 5px;
+            background: $black;
+            border-radius: 50%;
+        }
+    }
+
+    .security {
+        display: none;
+    }
+}

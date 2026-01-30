@@ -1,0 +1,188 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Pagination
+/*-----------------------------------------------------------------------------------*/
+.pagination-wrapper {
+    .white-bg-block {
+        padding: 15px 30px !important;
+        &.block-footer {
+            nav {
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+    }
+}
+
+.pagination {
+    margin-bottom: 0;
+    &.txt-style {
+        .page-item {
+            .page-link {
+                border: 0;
+                color: #aaaaac;
+                &:hover {
+                    background: unset;
+                }
+                &:focus {
+                    color: $black;
+                    background-color: unset;
+                    box-shadow: unset;
+                }
+                &.active {
+                    color: $black;
+                    background: unset;
+                }
+                &[aria-label="Previous"], &[aria-label="Next"] {
+                    border: 1px solid #dcdee0;
+                    border-radius: 4px;
+                    line-height: 1.4;
+                    height: 36px;
+                    cursor: default;
+                    pointer-events: unset;
+                    &.active {
+                        cursor: pointer;
+                        &:focus {
+                            color: $black;
+                        }
+                    }
+                    &:focus {
+                        color: #aaaaac;
+                    }
+                }
+            }
+        }
+
+        .arrow {
+            display: none;
+        }
+
+        &.arrow-active {
+            .arrow {
+                display: block;
+            }
+        }
+    }
+
+
+    &.circle-style {
+        filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1'><defs><filter id='round'><feGaussianBlur in='SourceGraphic' stdDeviation='3' result='blur' /><feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9' result='goo'/><feComposite in='SourceGraphic' in2='goo' operator='atop'/></filter></defs></svg>#round");
+
+        .page-item {
+            .page-link {
+                color: $black;
+                border: 0;
+                border-radius: unset;
+                background: unset;
+                text-align: center;
+                width: 36px;
+                &:focus {
+                    background-color: unset;
+                    box-shadow: unset;
+                }
+
+                &:hover {
+                    color: var(--bs-blue);
+                }
+
+                &.active {
+                    background: var(--bs-blue);
+                    border-radius: 50%;
+                    color: $white;
+                }
+            }
+        }
+
+        .pagination-skip {
+            .page-link {
+                width: 36px;
+                height: 36px;
+                background: #eee;
+                border-radius: 50%;
+                text-align: center;
+                padding-left: 0;
+                padding-right: 0;
+                cursor: default;
+                pointer-events: unset;
+                color: #aaa;
+                &:hover {
+                    color: #aaa;
+                }
+            }
+
+
+            &.active {
+                .page-link {
+                    background: #eee;
+                    color: $black;
+                    cursor: pointer;
+                    &:hover {
+                        color: var(--bs-blue);
+                    }
+                }
+            }
+        }
+
+        .arrow {
+            background: #eee;
+            border-radius: 50%;
+            .page-item {
+                .page-link {
+                    &[aria-label="Previous"], &[aria-label="Next"] {
+                        cursor: default;
+                        pointer-events: unset;
+                        color: #aaa;
+                        &:hover {
+                            color: #aaa;
+                        }
+                    }
+                    &.active {
+                        background: #eee;
+                        color: $black;
+                        cursor: pointer;
+                        &:hover {
+                            color: var(--bs-blue);
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--bs-blue);
+                    }
+                }
+            }
+
+        }
+        .pagination-count {
+            background: #eee;
+            border-radius: 20px;
+        }
+    }
+}
+
+.pagination-skip-wrapper {
+    & > div {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 16px;
+            top: 4px;
+            left: 50%;
+            background: #dcdee0;
+        }
+
+        .pagination-skip-first, .pagination-skip-last {
+            color: #aaaaac;
+            cursor: default;
+
+            &:focus {
+                color: $black;
+            }
+            &.active {
+                color: $black;
+                cursor: pointer;
+            }
+        }
+    }
+}

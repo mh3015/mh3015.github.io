@@ -1,0 +1,178 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Customer Common - /customer/
+/*-----------------------------------------------------------------------------------*/
+.customer-container {
+    // background: #f1f4f6;
+    background: #f5f6f7;
+    padding: 30px 0 70px;
+
+
+    // 왼쪽 메뉴
+    .account-nav {
+        width: 280px;
+        margin-right: 10px;
+        padding: 30px;
+        background: $white;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+        @include sticky;
+        top: 22px;
+
+        .account_nav_trigger {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            @include font-secondary;
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .mb-nav {
+            display: none;
+        }
+
+
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: block;
+                padding-bottom: 10px;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                a {
+                    display: block;
+                    position: relative;
+                    padding: 10px 0;
+                    color: $black;
+                    font-size: 15px;
+                    font-weight: 300;
+                    z-index: 1;
+
+                    &.selected {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: -30px;
+                            width: 8px;
+                            height: 42px;
+                            background: #c3cacf;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: -30px;
+                            width: calc(100% + 40px);
+                            height: 42px;
+                            background: #f1f4f6;
+                            border-radius: 0 20px 20px 0;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            &::after {
+                                background: #f1f4f6;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: -30px;
+                            width: calc(100% + 40px);
+                            height: 42px;
+                            background: #f3f6f8;
+                            border-radius: 0 20px 20px 0;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            width: 220px;
+            margin-right: 0;
+            padding: 20px;
+
+            ul {
+                li {
+                    a {
+                        &.selected {
+                            &::before {
+                                left: -20px;
+                            }
+                            &::after {
+                                left: -20px;
+                                width: calc(100% + 20px);
+                            }
+                        }
+                        &:hover {
+                            &::after {
+                                left: -20px;
+                                width: calc(100% + 20px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 25px;
+
+            .account_nav_trigger {
+                cursor: pointer;
+
+                .mb-nav {
+                    display: block;
+                    i {
+                        font-size: 18px;
+                        vertical-align: -4px;
+                    }
+                }
+
+                .nav-show {
+                    display: none;
+                }
+            }
+
+            &.hidden_nav {
+                padding: 15px 20px;
+
+                .account_nav_trigger {
+                    margin-bottom: 0;
+
+                    .nav-show {
+                        display: block;
+                    }
+
+                    .nav-hide {
+                        display: none;
+                    }
+                }
+
+                ul {
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    .empty-order-wrapper {
+        .one-btn {
+            margin-bottom: 8px;
+        }
+    }
+}

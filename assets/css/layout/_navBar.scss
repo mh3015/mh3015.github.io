@@ -1,0 +1,228 @@
+@use '../abstracts' as *;
+body {
+  &.main-intro-header {
+    header {
+      background: transparent;
+      border-bottom: 1px solid transparent;
+
+      & + div, & + section {
+        margin-top: 0;
+      }
+
+      .white-logo {
+        display: block;
+      }
+      .default-logo {
+        display: none;
+      }
+
+      .header-container {
+        nav {
+          ul {
+            li {
+              button {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+
+      &.scrolled, &:hover {
+        background: $white;
+        border-bottom: 1px solid #f2f2f2;
+
+        .white-logo {
+          display: none;
+        }
+        .default-logo {
+          display: block;
+        }
+
+        .header-container {
+          nav {
+            ul {
+              li {
+                button {
+                  color: var(--color-gray-900);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+  top: 0;
+  z-index: 999;
+  @include transition-400;
+  background: $white;
+
+  .white-logo {
+    display: none;
+  }
+
+  &:hover {
+    background: $white;
+    .header-container {
+      .white-logo {
+        display: none;
+      }
+      .default-logo {
+        display: block;
+      }
+
+      nav {
+        ul {
+          li {
+            button {
+              color: var(--color-gray-900);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.scrolled {
+    background: $white;
+    border-bottom: 1px solid #f2f2f2;
+    .header-container {
+      .white-logo {
+        display: none;
+      }
+      .default-logo {
+        display: block;
+      }
+
+      nav {
+        ul {
+          li {
+            button {
+              color: var(--color-gray-900);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-container {
+    nav {
+      ul {
+        margin: 0;
+        li {
+          display: block;
+          &:hover {
+              color: $brand-color;
+              .nav-inner {
+                display: block;
+              }
+            }
+
+          button {
+            border: 0;
+            background: none;
+            color: var(--color-gray-900);
+
+            &.active {
+              position: relative;
+              color: $brand-color;
+              &::after {
+                content: "";
+                position: absolute;
+                top: -6px;
+                right: -6px;
+                background: $brand-color;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+              }
+            }
+          }
+
+          .nav-inner {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: $white;
+            padding: 30px 0;
+            margin-top: calc(1.5rem + 1px);
+            -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+            -o-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+            -ms-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            height: auto;
+            max-height: calc(100vh - 132px);
+            overflow: hidden;
+            overflow-y: auto;
+            z-index: 9;
+
+            .left-wrapper {
+              width: 200px;
+              border-right: 1px solid #f2f2f2;
+            }
+
+            .right-wrapper {
+              width: calc(100% - 200px);
+
+              ul {
+                li {
+                  min-height: 200px;
+                  .menu-link {
+                    margin-bottom: 10px;
+                    color: var(--color-gray-900);
+
+                    & + p {
+                      font-size: var(--text-body-6);
+                      font-weight: 300;
+                      color: var(--color-gray-800);
+                      margin-bottom: 0;
+                    }
+                  }
+
+                  a.active {
+                    .menu-link {
+                      color: $brand-color;
+
+                      & + p {
+                        color: var(--color-gray-900);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+
+          .menu-inquiry {
+            display: block;
+            padding: 7px 20px 5px;
+            border: 1px solid $brand-color;
+            border-radius: 18px;
+            background: $brand-color;
+            color: $white;
+            font-size: 15px;
+            &:hover {
+              background: $white;
+              color: $brand-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  & + div, & + section {
+    margin-top: 72px;
+  }
+}

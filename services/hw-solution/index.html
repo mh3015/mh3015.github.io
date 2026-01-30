@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <script>
+      fetch("/include/html/head.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.head.insertAdjacentHTML("beforeend", html);
+        });
+    </script>
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      // 인클루드 파일
+      $(document).ready(function () {
+        $("header").load("/include/html/header.html");
+
+        $("#footer").load("/include/html/footer.html");
+        // $("#bottom").load("/include/html/bottom.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <header></header>
+
+    <div class="sub-nav-wrapper">
+      <div class="container-xxxl">
+        <ul class="row">
+          <li class="col-auto">
+            <a href="/services/hw-solution/">HW 솔루션</a>
+          </li>
+          <li class="col-auto">
+            <a href="/services/sw-solution/">SW 솔루션</a>
+          </li>
+          <li class="col-auto">
+            <a href="/services/cctv-solution/">CCTV 솔루션</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="sub-page-title-wrapper">
+      <div class="container-xxxl">
+        <div class="">
+          <h1 class="">HW 솔루션 <span class="f1rem text-blue-200">Hardware Solution</span></h1>
+          <p class="">
+            <span>
+              검증된 기술력과 오랜 운영 경험, 전국 지역센터의 즉각적인 지원을
+              통해 안정적인 IT 운영과 최적의 투자 효과를 제공합니다.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrapper">
+      <div class="container-xxxl">
+        <div class="row gx-5">
+          <div class="col-md-6 order-md-1 order-5">
+            <div class="section-title pe-lg-5 mt-xxl-5 pt-xxl-5 mt-xl-5 animate" data-animate="fadeInUp" data-duration="1.0s">
+              <div class="title-txt">
+                <h1>Dell 서버 시스템</h1>
+                <h2>Dell PowerEdge 서버 시스템은 차세대 IT 환경에 필요한 성능과 유연성을 기반으로 <span class="t600">엔터프라이즈 IT 운영의 복잡성을 효과적으로 해소</span>합니다.</h2>
+              </div>
+
+              <div class="topmargin-30">
+                <p>가상화, 클라우드 컴퓨팅, 모바일 액세스와 같은 강력한 IT 트렌드가 엔터프라이즈 IT의 필수적인 신기술을 추동합니다. 레거시 기능과 이 신기술을 통합하면 관리해야 할 시스템, 표준, 패치 작동 리소스의 복잡한 환경이 만들어질 수 있습니다.</p>
+
+                <p>Dell PowerEdge 차세대 서버 및 공유 인프라 솔루션은 일관된 아키텍처와 최신 기술로 IT 과제를 달성하도록 지원합니다. Dell의 솔루션은 다음을 지원합니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-5 order-1 d-lg-block d-md-flex align-items-md-center">
+            <div class="img-box-01 animate" data-animate="fadeInUp" data-duration="1.0s">
+              <div class="back">
+                <img src="/assets/images/dell-02-370x225.jpg" alt="Dell Sever System" />
+              </div>
+              <div class="front">
+                <img src="/assets/images/dell-01-1130x700.jpg" alt="Dell Sever System" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrapper bg-light-gray">
+      <div class="container-xxxl">
+        <div class="row gx-5">
+          <div class="col-md-6 pe-lg-5 d-lg-block d-md-flex align-items-md-center">
+            <div class="img-box-02 animate" data-animate="fadeInUp" data-duration="1.0s">
+              <div class="back">
+                <img src="/assets/images/emc-01-1200x700.jpg" alt="EMC 스토리지 시스템" />
+              </div>
+              <div class="front">
+                <img src="/assets/images/emc-02-1050x700.jpg" alt="EMC 스토리지 시스템" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="section-title mt-xxl-5 pt-xxl-5 mt-xl-5 animate" data-animate="fadeInUp" data-duration="1.0s">
+              <div class="title-txt">
+                <h1>EMC 스토리지 시스템</h1>
+                <h2>Dell EMC Unity 스토리지 시스템은 <span class="t600">고성능 All-Flash 기반 아키텍처와 뛰어난 사용 편의성</span>을 통해 클라우드 환경에 최적화된 효율적인 데이터 스토리지 인프라를 제공합니다.</h2>
+              </div>
+
+              <div class="topmargin-30 color-555 t300">
+                <p>
+                  Storage 분야 글로벌 1위 기업인 Dell EMC와 파트너 체결을 통해 점차 발전하는 Cloud 시장에 대한 대비 및 고객사의 업무효율도를 만족시켜 드립니다. 
+                  Dell EMC Unity AF는 고성능의 SSD에 최적화된 최신 하드웨어와 운영체제를 기반으로 설계된 제품으로 대용량의 3D V-NAND를 탑재하여 비용 효율적으로 AFA 전환을 보장합니다.
+                </p>
+
+                <p>Dell EMC Unity는 사용 편의성을 극대화할 뿐 아니라 신속한 구축과 효율적인 관리, 클라우드로 데이터 스토리지를 원활하게 계층화하는 기능을 지원하여 한층 높은 가치를 실현합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section-wrapper">
+      <div class="container-xxxl">
+        <div class="row gx-5">
+          <div class="col-md-6 order-md-1 order-5">
+            <div class="section-title pe-lg-5 mt-xxl-5 pt-xxl-5 mt-xl-5 animate" data-animate="fadeInUp" data-duration="1.0s">
+              <div class="title-txt">
+                <h1>Hitachi 스토리지 시스템</h1>
+                <h2>Hitachi 스토리지 솔루션은 고객의 IT 환경에 최적화된 유연한 아키텍처를 기반으로 <span class="t600">인프라 비용을 절감하고 엔터프라이즈 IT 환경의 통합과 확장</span>을 지원합니다.</h2>
+              </div>
+
+              <div class="topmargin-30">
+                <p>당사는 효성인포메이션시스템과 Hitachi 스토리지 및 솔루션에 대해 강력한 파트너십을 체결하였습니다.
+                  히타치 밴타라는 데이터, 애플리케이션 및 비즈니스의 유형에 상관없이 하이브리드 플래시부터 올플래시에 이르기까지 고객의 IT 인프라에 대한 니즈를 파악하여, 기존 인프라에 최적화 된 완벽한 인프라 솔루션을 제시합니다.
+                </p>
+
+                <p>인프라의 투자 및 운영 비용을 절감하고, 간편하게 모든 엔터프라이즈 IT 인프라 환경을 중앙 집중화, 통합 및 신속하게 확장함으로써 디지털 엔터프라이즈로 한걸음 더 빨리 나아가실 수 있길 바랍니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-5 order-1 d-lg-block d-md-flex align-items-md-center">
+            <div class="img-box-01 animate" data-animate="fadeInUp" data-duration="1.0s">
+              <div class="back">
+                <img src="/assets/images/hitachi-02-548x548.jpg" alt="Hitachi 스토리지 System" />
+              </div>
+              <div class="front">
+                <img src="/assets/images/hitachi-01-548x548.jpg" alt="Hitachi Sever System" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="layout-pre-footer-wrapper">
+      <div class="container-xxxl">
+        <div class="row">
+          <div class="col-lg-8">
+            <p class="nomargin t500">문의하기</p>
+            <h1 class="line-height-1_3 bottommargin-30">최적의 인프라 솔루션 선택이 고민되신다면,<br> 검증된 경험을 보유한 당사 전문가와 상담해 보시기 바랍니다.</h1>
+            <a href=""><span>전문가와 문의하기</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div id="footer"></div>
+    <!-- <div id="bottom"></div> -->
+    <script src="/assets/plugins/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/jquery-migrate-1.4.1.min.js"></script>
+
+    <!-- dropzone@5 - https://www.dropzone.dev/ -->
+    <!--script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script-->
+    <!-- <script src="/assets/js/dropzone.js"></script> -->
+
+    <!-- bootstrap datepicker -->
+    <!-- <script src="/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script> -->
+    <!-- Swiper Slide -->
+    <script src="/assets/plugins/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Animation JS -->
+    <script src="/assets/js/animate.min.js"></script>
+
+    <!-- core -->
+    <!-- <script src="/assets/js/script.js"></script> -->
+    <script src="/assets/js/common.js"></script>
+
+    <!-- Script files -->
+    <!-- <script src="/assets/js/script-links.js"></script> -->
+
+  </body>
+</html>

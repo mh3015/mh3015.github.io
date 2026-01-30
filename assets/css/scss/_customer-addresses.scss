@@ -1,0 +1,260 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Addresses - /customer/addresses/
+/*-----------------------------------------------------------------------------------*/
+.customer-addr-container {
+    p {
+        margin: 0;
+        font-size: 15px;
+    }
+    .addr-keryword-search {
+        background: $white;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        @include flex-align-center;
+
+        input {
+            font-size: 15px;
+            font-weight: 300;
+            border: 0;
+            padding: 4px 2px 4px 14px;
+            background: unset;
+            width: calc(100% - 30px);
+            
+            &::placeholder {
+                color: #949494;
+            }
+        }
+        button {
+            border: 0;
+            background: unset;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+    }
+    .order-sort-search {
+        .order-sort {
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: block;
+                }
+            }
+
+            .checkbox-input {
+                display: none;
+
+                &:checked {
+                    & + .checkbox-label {
+                        background: $black;
+                        color: $white;
+
+                        .count {
+                            color: $success;
+                        }
+
+                        &[for=canceled] {
+                            .count {
+                                color: var(--bs-red);
+                            }
+                        }
+                    }
+                }
+            }
+            .checkbox-label {
+                height: 31px;
+                padding: 6px 12px;
+                background: #f1f4f6;
+                color: #767678;
+                @include font-secondary
+                font-size: 13px;
+                font-weight: 500;
+                border: 0;
+                border-radius: 15px;
+                cursor: pointer;
+
+                .count {
+                    margin-left: 5px;
+                    color: var(--bs-success);
+                }
+
+                &[for=canceled] {
+                    .count {
+                        color: $red;
+                    }
+                }
+            }
+
+            .swiper-slide {
+                width: auto;
+            }
+
+            // @media (max-width: 575px) {
+            //     position: relative;
+            //     overflow: hidden;
+            //     &::before {
+            //         content: "";
+            //         position: absolute;
+            //         top: 0px;
+            //         bottom: 0px;
+            //         left: 0px;
+            //         z-index: 2;
+            //         width: 20px;
+            //         background: linear-gradient(90deg, rgb(255, 255, 255) 15.71%, rgba(255, 255, 255, 0) 107.94%);
+            //         pointer-events: none;
+            //     }
+            //     &::after {
+            //         position: absolute;
+            //         content: "";
+            //         top: 0px;
+            //         right: 0px;
+            //         bottom: 0px;
+            //         z-index: 2;
+            //         width: 20px;
+            //         background: linear-gradient(270deg, rgb(255, 255, 255) 15.71%, rgba(255, 255, 255, 0) 107.94%);
+            //         pointer-events: none;
+            //
+            //     }
+            //     .swiper-wrapper {
+            //         flex-wrap: nowrap;
+            //     }
+            // }
+        }
+    }
+
+
+    // 수정 버튼
+    .btn-delete {
+        width: 34px;
+        height: 34px;
+        padding: .25em .25em;
+        background: unset;
+        font-size: 16px;
+        color: #777;
+        line-height: 1;
+        border: 0;
+
+        & > span {
+            vertical-align: -1px;
+        }
+    }
+
+    // 2분할 일 경우 높이 조절
+    // .address-list {
+    //     .each-box {
+    //         display: flex;
+    //         flex-direction: column;
+    //
+    //         .white-bg-block {
+    //             display: flex;
+    //             flex-direction: column;
+    //             min-height: -webkit-fill-available;
+    //             justify-content: space-between;
+    //         }
+    //     }
+    //     .btn-edit-wrapper {
+    //         margin-top: auto;
+    //     }
+    // }
+
+
+    // 주소 디테일
+    .address-detail-wrapper {
+        margin-bottom: 10px;
+        .address-detail {
+            .name-wrapper {
+                @include font-secondary;
+                font-weight: 600;
+                .phone {
+                    position: relative;
+                    margin-left: 8px;
+                    padding-left: 9px;
+                    font-family: $font-primary;
+                    font-weight: 300;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        width: 1px;
+                        height: 12px;
+                        margin-top: -6px;
+                        background: #e0e0e0;
+                        content: '';
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .one-btn {
+        margin-top: 20px;
+        button, a {
+            display: inline-block;
+            padding: 5px 30px;
+            border-radius: 20px;
+            border: 2px solid $black;
+            font-size: 15px;
+            font-weight: 400;
+            color: $black;
+            background: $white;
+            &:hover {
+                background: #f5f5f5;
+            }
+        }
+
+        @media (max-width: 991px) {
+            button, a {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+
+    // 수정 페이지 - /customer/addresses/edit/
+    &.edit {
+        .btn-wrapper {
+            button {
+                display: block;
+                width: 100%;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                text-align: center;
+                @include font-secondary;
+                font-size: 15px;
+                font-weight: 400;
+                padding: 7px 10px;
+            }
+            .clear-all {
+                background: $white;
+                &:hover {
+                    background: #f9f9f9;
+                }
+            }
+            .save {
+                border-color: $black;
+                background: $black;
+                color: $white;
+                &:hover {
+                    color: #eee;
+                }
+            }
+        }
+    }
+
+    .create-new-address {
+        .one-btn {
+            a {
+                width: 100%;
+                text-align: center;
+                padding: 10px 30px;
+                border-radius: 22px;
+            }
+        }
+    }
+}
